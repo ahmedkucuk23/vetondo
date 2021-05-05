@@ -1,0 +1,18 @@
+<div class="hero" style="height: 50vh">
+</div>
+
+<div class="container">
+  <div class="vets">
+    <div class="vets_h">
+      <h1>Find your Vet</h1>
+    </div>
+    <div class="vets_all">
+      <% @vets.each do |vet| %>
+        <h2><%= vets.name %></h2>
+        <p><%= vets.description %></p>
+        <h3><%= '⭐' * vets.rating %></h3>
+      <% end %>
+
+    </div>
+  </div>
+</div>
