@@ -7,10 +7,20 @@
       <h1>Find your Vet</h1>
     </div>
     <div class="vets_all">
-      <% @vets.each do |vet| %>
-        <h2><%= vets.name %></h2>
-        <p><%= vets.description %></p>
-        <h3><%= '⭐' * vets.rating %></h3>
+
+      <% Vet.all.each do |vet| %>
+        <div class="vet_card d-flex row align-items-center">
+          <div class="col-lg-4 col-md-4">
+            <h3><%= vet.name %></h3>
+          </div>
+          <div class="col-lg-5 col-md-6">
+            <h5><%= vet.description %></h5>
+          </div>
+          <div class="col-lg-3 col-md-2">
+            <h3><%= vet.price %> $</h3>
+            <p>Per hour</p>
+          </div>
+        </div>
       <% end %>
 
     </div>
