@@ -5,5 +5,6 @@ class PagesController < ApplicationController
   end
 
   def vets
+
   end
 end
