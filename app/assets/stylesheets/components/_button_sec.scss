@@ -1,0 +1,22 @@
+.button_sec{
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #6e7079;
+  background-color: transparent;
+  padding: 5px 30px;
+  margin: 10px 0;
+  border: 3px solid #6e7079;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+  border-color: #5dbedb;
+  color: #5dbedb;
+  width: 100%;
+}
+.button_sec:hover{
+  color: white;
+  background-color:#5dbedb;
+}
