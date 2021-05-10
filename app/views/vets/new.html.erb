@@ -1,10 +1,9 @@
-<form action="/vets" method="post">
-  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-  <label for="name">Name</label>
-  <input type="text" name="name">
-  <label for="description">Description</label>
-  <input type="text" name="description">
-  <label for="price">Price</label>
-  <input type="text" name="price">
-  <input type="submit">
-</form>
+<%= form_for @vet do |f| %>
+  <%= f.label :name, required: true %>
+  <%= f.text_field :name, required: true %>
+  <%= f.label :description, required: true %>
+  <%= f.text_field :description, required: true %>
+  <%= f.label :price_per_minute, required: true %>
+  <%= f.number_field :price, required: true %>
+  <%= f.submit %>
+<% end %>

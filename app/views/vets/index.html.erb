@@ -6,9 +6,14 @@
     <div class="vets_h">
       <h1>Find your Vet</h1>
     </div>
+    <div class="become_vet">
+      <%= link_to 'Become A Vet', new_vet_path %>
+
+    </div>
     <div class="vets_all">
 
       <% Vet.all.each do |vet| %>
+      <%= link_to
         <div class="vet_card d-flex row align-items-center">
           <div class="col-lg-4 col-md-4">
             <h3><%= vet.name %></h3>
@@ -18,9 +23,10 @@
           </div>
           <div class="col-lg-3 col-md-2">
             <h3><%= vet.price %> $</h3>
-            <p>Per hour</p>
+            <p>Per minute</p>
           </div>
         </div>
+        vet_path(vet) %>
       <% end %>
 
     </div>
