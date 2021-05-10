@@ -9,6 +9,7 @@ class VetsController < ApplicationController
   end
 
   def new
+    @vet = Vet.new
   end
 
   def create
