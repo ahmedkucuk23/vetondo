@@ -1,9 +1,16 @@
-<%= form_for @vet do |f| %>
-  <%= f.label :name, required: true %>
-  <%= f.text_field :name, required: true %>
-  <%= f.label :description, required: true %>
-  <%= f.text_field :description, required: true %>
-  <%= f.label :price_per_minute, required: true %>
-  <%= f.number_field :price, required: true %>
-  <%= f.submit %>
-<% end %>
+<div class="form_signup">
+  <div class="container">
+    <div class="form_signup1">
+      <h1 style="margin-top:20px;">Become a Vet</h1>
+      <%= form_for @vet do |f| %>
+        <%= f.label :name, required: true %>
+        <%= f.text_field :name, required: true %>
+        <%= f.label :description, required: true %>
+        <%= f.text_field :description, required: true %>
+        <%= f.label :price_per_minute, required: true %>
+        <%= f.number_field :price, required: true %>
+        <%= f.submit :class => "button_1" %>
+      <% end %>
+    </div>
+  </div>
+</div>
