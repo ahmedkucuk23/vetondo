@@ -7,8 +7,10 @@
     <div class="col-lg-3 justify-content-center">
       <h3><%= @vet.price %> $</h3>
       <p>Per minute</p>
-      <%= link_to "Request a Call", vets_path, :class => "button_sec" %>
+      <%= link_to "Request a Call (X)", vets_path, :class => "button_sec" %>
     </div>
   </div>
-
+<%= link_to "Back", vets_path, :class => "button_sec" %>
+<%= link_to "Edit", edit_vet_path, :class => "button_sec" %>
+<%= link_to "Delete", vet_path(@vet), :class => "button_sec", method: :delete, data: { confirm: "Are you sure you want to delete this profile?"} %>
 </div>

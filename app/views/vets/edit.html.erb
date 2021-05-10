@@ -1,9 +1,16 @@
-<%= form_for @vet do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :price %>
-  <%= f.number_field :price %>
-  <%= f.submit %>
-<% end %>
+<div class="form_signup">
+  <div class="container">
+    <div class="form_signup1">
+      <%= form_for @vet do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+        <%= f.label :description %>
+        <%= f.text_field :description %>
+        <%= f.label :price %>
+        <%= f.number_field :price %>
+        <%= f.submit :class => "button_1" %>
+        <%= link_to "Back", vets_path, :class => "button_sec", :style => "width:40%;" %>
+      <% end %>
+    </div>
+  </div>
+</div>

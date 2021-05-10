@@ -1,14 +1,13 @@
-<div class="hero" style="height: 50vh">
-</div>
 
 <div class="container">
   <div class="vets">
-    <div class="vets_h">
-      <h1>Find your Vet</h1>
-    </div>
-    <div class="become_vet">
-      <%= link_to 'Become A Vet', new_vet_path, :class => "button_sec" %>
-
+    <div class="d-flex row justify-content-center align-items-center">
+      <div class="vets_h col-lg-6">
+        <h1 class="home_title">Find your Vet</h1>
+      </div>
+      <div class="become_vet col-lg-6">
+        <%= link_to 'Become A Vet', new_vet_path, :class => "button_sec", :style => "width:40%;" %>
+      </div>
     </div>
     <div class="vets_all">
 

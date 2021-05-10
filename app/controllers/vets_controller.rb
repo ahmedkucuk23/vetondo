@@ -1,11 +1,11 @@
 class VetsController < ApplicationController
-
+  before_action :find_vet, only: [:show, :edit, :update, :destroy]
   def index
     @vets = Vet.all
   end
 
   def show
-    @vet = Vet.find(params[:id])
+    find_vet
   end
 
   def new
@@ -20,17 +20,17 @@ class VetsController < ApplicationController
   end
 
   def edit
-    @vet = Vet.find(params[:id])
+    find_vet
   end
 
   def update
-    @vet = Vet.find(params[:id])
+    find_vet
     @vet.update(vet_params)
     redirect_to vet_path(@vet)
   end
 
   def destroy
-    @vet = Vet.find(params[:id])
+    find_vet
     @vet.destroy
     redirect_to vets_path
   end
@@ -39,6 +39,10 @@ class VetsController < ApplicationController
 
   def vet_params
     params.require(:vet).permit(:name, :description, :price)
+  end
+
+  def find_vet
+    @vet = Vet.find(params[:id])
   end
 
 end
