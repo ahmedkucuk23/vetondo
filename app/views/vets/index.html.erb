@@ -7,26 +7,26 @@
       <h1>Find your Vet</h1>
     </div>
     <div class="become_vet">
-      <%= link_to 'Become A Vet', new_vet_path %>
+      <%= link_to 'Become A Vet', new_vet_path, :class => "button_sec" %>
 
     </div>
     <div class="vets_all">
 
       <% Vet.all.each do |vet| %>
-      <%= link_to
-        <div class="vet_card d-flex row align-items-center">
-          <div class="col-lg-4 col-md-4">
-            <h3><%= vet.name %></h3>
+        <%= link_to vet_path(vet), class: "card_link" do %>
+          <div class="vet_card d-flex row align-items-center">
+            <div class="col-lg-4 col-md-4">
+              <h3><%= vet.name %></h3>
+            </div>
+            <div class="col-lg-5 col-md-6">
+              <h5><%= vet.description %></h5>
+            </div>
+            <div class="col-lg-3 col-md-2">
+              <h3><%= vet.price %> $</h3>
+              <p>Per minute</p>
+            </div>
           </div>
-          <div class="col-lg-5 col-md-6">
-            <h5><%= vet.description %></h5>
-          </div>
-          <div class="col-lg-3 col-md-2">
-            <h3><%= vet.price %> $</h3>
-            <p>Per minute</p>
-          </div>
-        </div>
-        vet_path(vet) %>
+        <% end %>
       <% end %>
 
     </div>
