@@ -11,6 +11,7 @@
     name: Faker::Name.name ,
     description: Faker::Company.catch_phrase ,
     speciality: Faker::Science.element ,
+    address: Faker::Address.country ,
     price: rand(1..100)
     )
 end
