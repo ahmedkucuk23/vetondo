@@ -38,7 +38,7 @@ class VetsController < ApplicationController
   private
 
   def vet_params
-    params.require(:vet).permit(:name, :description, :price, :speciality, :adress)
+    params.require(:vet).permit(:name, :description, :price, :speciality, :address)
   end
 
   def find_vet
