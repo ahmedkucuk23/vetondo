@@ -2,7 +2,6 @@
   font-size: 18px;
 }
 .home_card_p{
-
   font-size: 14px;
   line-height: 21px;
 }
@@ -12,4 +11,22 @@
 }
 .card_link:hover{
   color: grey;
+}
+.vet_index_pic{
+  width:100%;
+  border-radius: 50%;
+  height:100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .vet_index_pic{
+    max-height:40vh;
+    border-radius: 0;
+    object-fit:cover;
+    width:100%;
+
+  }
+  .container{
+    text-align:center;
+  }
 }

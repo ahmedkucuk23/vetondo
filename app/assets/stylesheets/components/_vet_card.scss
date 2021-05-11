@@ -1,4 +1,68 @@
 .vet_card{
   background-color: #fff;
-  border: grey 1px solid;
+  border-top: 1px grey solid;
+  padding: 10px 0;
 }
+.vet_name{
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  line-height: 25px;
+  color: #393939;
+  cursor: pointer;
+}
+.vet_gray{
+  font-size: 12px;
+  font-weight: normal;
+  cursor: pointer;
+  color: #9c9c9c;
+  font-family: 'Montserrat', sans-serif;
+   font-weight:400;
+}
+.vet_spec{
+  font-size: 15px;
+  font-weight: normal;
+  cursor: pointer;
+  color: #9c9c9c;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:600;
+}
+.vet_desc{
+  font-size:17px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+.price_min{
+  font-size: 14px;
+  font-weight: normal;
+  cursor: pointer;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight:400;
+}
+.button_call{
+   border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: #FF4B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+.button_call:hover{
+  border-radius: 20px;
+    border: 1px solid #FF4B2B;
+    background-color: white;
+    color: #FF4B2B;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}
+
+
