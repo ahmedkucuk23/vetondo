@@ -1,8 +1,10 @@
 <div class="container">
   <div class="d-flex row">
     <div class="col-lg-9">
-      <h3><%= @vet.name %></h3>
-      <h5><%= @vet.description %></h5>
+      <h3 class="vet_name"><%= @vet.name %></h3>
+      <p class="vet_gray"><%= @vet.speciality %> | <%= @vet.address %></p>
+      <h5 class="vet_desc"><%= @vet.description %></h5>
+
     </div>
     <div class="col-lg-3 justify-content-center">
       <h3><%= @vet.price %> $</h3>
