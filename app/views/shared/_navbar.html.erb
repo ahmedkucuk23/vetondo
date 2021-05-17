@@ -2,25 +2,14 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo.webp" %>
     <% end %>
-    <ul class="navbar-nav mr-auto">
-    <% if user_signed_in? %>
 
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to "Vets", vets_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto align-items-center">
       <% if user_signed_in? %>
         <li class="nav-item active">
           <%= link_to "Home", "/", class: "nav-link" %>
@@ -35,11 +24,18 @@
           </div>
         </li>
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+       <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
-        <li class="nav-item active">
-          <%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %>
+        <li class="nav-item">
+          <%= link_to "Vets", vets_path, class: "nav-link" %>
+        </li>
+
+        <li class="nav-item" style="margin: 10px 0;">
+          <%= link_to "Login", new_user_session_path, class: "button_2" %>
+        </li>
+        <li class="nav-item"  style="margin: 10px 0;">
+          <%= link_to "Sign Up", new_user_registration_path, class: "button_2_2" %>
         </li>
       <% end %>
     </ul>
