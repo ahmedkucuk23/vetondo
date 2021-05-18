@@ -14,6 +14,7 @@ class VetsController < ApplicationController
 
   def create
     @vet = Vet.new(vet_params)
+    #@vet.user = current_user
     @vet.save
     redirect_to vet_path(@vet)
     # Will raise ActiveModel::ForbiddenAttributesError
