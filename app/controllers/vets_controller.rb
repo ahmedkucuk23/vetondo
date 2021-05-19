@@ -1,5 +1,6 @@
 class VetsController < ApplicationController
   before_action :find_vet, only: [:show, :edit, :update, :destroy]
+
   def index
     @vets = Vet.all
     @vet = policy_scope(Vet)
@@ -16,11 +17,11 @@ class VetsController < ApplicationController
 
   def create
     @vet = Vet.new(vet_params)
-    #@vet.user = current_user
+    @vet.user = current_user
     authorize @vet
+
     @vet.save
     redirect_to vet_path(@vet)
-    # Will raise ActiveModel::ForbiddenAttributesError
   end
 
   def edit
