@@ -10,3 +10,26 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+@media screen and (max-width: 600px) {
+  .dropdown-menu{
+    border:0;
+  }
+  .dropdown-item{
+    text-align:center;
+    .dropdown-item:hover{
+
+    }
+  }
+ }
+@media screen and (max-width: 600px){
+.avatar {
+display: none;
+}
+.dropdown-menu {
+display: block;
+padding: 0;
+}
+}
+
+
