@@ -15,7 +15,7 @@
         <%= link_to vet_path(vet), class: "card_link" do %>
           <div class="vet_card d-flex row align-items-center">
             <div class="col-lg-2 col-md-2">
-
+              <%= cl_image_tag vet.photo.key, height: 180, width: 180, crop: :fill, :class => "vet_prof_picture" %>
             </div>
             <div class="col-lg-7 col-md-7">
               <h3 class="vet_name"><%= vet.name %></h3>
