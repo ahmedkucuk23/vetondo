@@ -5,7 +5,7 @@ class VetsController < ApplicationController
     @vets = Vet.all
     @vet = policy_scope(Vet)
     if params[:query].present?
-      @vets = Vet.where(name: params[:query])
+      @vets = Vet.search_by_name(params[:query])
     else
       @vets = Vet.all
     end

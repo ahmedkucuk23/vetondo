@@ -2,27 +2,27 @@
 <div class="container">
   <div class="vets">
     <div class="d-flex row justify-content-center align-items-center" style="margin-bottom: 15px;">
-      <div class="vets_h col-lg-6">
+      <div class="vets_h col-lg-4">
         <h1 class="home_title">Find your Vet</h1>
       </div>
-      <div class="serch_vet col-lg-3">
+      <div class="serch_vet col-lg-5" style="text-align: center;">
         <%= form_tag vets_path, method: :get do %>
           <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Find a Vet:"
           %>
-          <%= submit_tag "Search", class: "btn btn-primary" %>
+          <%= submit_tag "Search", class: "button_3_3" %>
         <% end %>
       </div>
       <div class="become_vet col-lg-3">
-        <%= link_to 'Become A Vet', new_vet_path, :class => "button_3_3", :style => "width:40%;" %>
+        <%= link_to 'Become A Vet', new_vet_path, :class => "button_call", :style => "width:40%;" %>
       </div>
     </div>
 
     <div class="vets_all">
 
-      <% Vet.all.each do |vet| %>
+      <% @vets.each do |vet| %>
         <%= link_to vet_path(vet), class: "card_link" do %>
           <div class="vet_card d-flex row align-items-center">
             <div class="col-lg-2 col-md-2">
