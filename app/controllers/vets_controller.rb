@@ -4,6 +4,11 @@ class VetsController < ApplicationController
   def index
     @vets = Vet.all
     @vet = policy_scope(Vet)
+    if params[:query].present?
+      @vets = Vet.where(name: params[:query])
+    else
+      @vets = Vet.all
+    end
   end
 
   def show
