@@ -8,6 +8,7 @@
         <%= f.input :address, required:true %>
         <%= f.input :description, required: true %>
         <%= f.input :price, required: true %>
+        <p>All prices are in BAM</p>
         <%= f.input :photo, as: :file, required: true %>
         <%= f.submit :class => "button_1" %>
         <%= link_to "Back", vets_path, :class => "button_sec", :style => "width:40%;" %>
