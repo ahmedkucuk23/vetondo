@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_one :vet
-
+  has_many :vets
+  def is_vet_owner?
+    self.vets.any? ? true : false
+  end
 end

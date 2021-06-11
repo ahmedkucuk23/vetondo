@@ -1,0 +1,31 @@
+<div class="container">
+<h1>Profile Dashboard</h1>
+ <% if current_user.is_vet_owner? %>
+  <br>
+  <% @vets.each do |vet| %>
+  <%= link_to vet_path(vet), class: "card_link" do %>
+    <div class="container">
+      <div class="d-flex row">
+        <div class="col-lg-9 d-flex align-items-center">
+          <div class="">
+            <%= cl_image_tag vet.photo.key, height: 200, width: 200, crop: :fill, :class => "vet_prof_picture" %>
+          </div>
+          <div class="">
+            <h3 class="vet_name"><%= vet.name %></h3>
+            <p class="vet_gray"><%= vet.speciality %> | <%= vet.address %></p>
+            <h5 class="vet_desc"><%= vet.description %></h5>
+          </div>
+        </div>
+        <div class="col-lg-3 justify-content-center" style="text-align: center;">
+          <h3><%= vet.price %> BAM</h3>
+          <p>Per minute</p>
+          <%= link_to "Request a Call", vets_path, :class => "button_call" %>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+
+  <% end %>
+<% end %>
+</div>
