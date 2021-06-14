@@ -38,3 +38,63 @@
 .button_section{
   margin-top:50px;
 }
+.serch_vet{
+  text-align:center;
+  font-size:20px;
+}
+.button_3_3_3{
+  border-radius: 20px;
+  border: 1px solid #1cc5dc;
+  background-color: #1cc5dc;
+  color: #FFFFFF;
+  font-size: 15px;
+  //font-weight: bold;
+  padding: 8px 5px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+  margin: 5px 3px;
+  width:100px;
+  text-align:center;
+}
+
+.button_3_3_3:hover {
+  border-radius: 20px;
+  border: 1px solid #1cc5dc;
+  background-color: white;
+  color: #1cc5dc;
+  //font-weight: bold;
+  padding: 8px 5px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
+}
+.form-hold{
+  background-color: #eee;
+  border: none;
+  padding: 2px 5px;
+  margin: 2px 0;
+}
+
+.sort_link{
+  font-size: 10px;
+  margin:0px 10px;
+  padding: 0px 10px;
+  line-height:1.2;
+  margin-bottom:8px;
+  font-family: 'Montserrat', sans-serif;
+}
+.sort_link:active{
+  background-color: black;
+  color: blue;
+}
+
+.padd_sort{
+  margin: 0 5px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.show_h{
+  font-size:18px;
+  font-family: 'Montserrat', sans-serif;
+}
+

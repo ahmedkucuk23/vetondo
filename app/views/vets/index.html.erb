@@ -1,24 +1,61 @@
 
 <div class="container">
   <div class="vets">
-    <div class="d-flex row justify-content-center align-items-center" style="margin-bottom: 15px;">
+    <div class="d-flex row justify-content-between align-items-center" style="margin-bottom: 15px;">
       <div class="vets_h col-lg-4">
         <h1 class="home_title">Find your Vet</h1>
-      </div>
-      <div class="serch_vet col-lg-5" style="text-align: center;">
-        <%= form_tag vets_path, method: :get do %>
-          <%= text_field_tag :query,
-            params[:query],
-            class: "form-control",
-            placeholder: "Find a Vet:"
-          %>
-          <%= submit_tag "Search", class: "button_3_3" %>
-        <% end %>
       </div>
       <div class="become_vet col-lg-3">
         <%= link_to 'Become A Vet', new_vet_path, :class => "button_call", :style => "width:40%;" %>
       </div>
     </div>
+
+    <div class="serch_vet d-flex row justify-content-between align-items-end" style="text-align: center; padding-bottom: 20px;">
+
+    <div class="showing row">
+      <h5 class="show_h">Showing:</h5>
+      <div class="padd_sort">
+        <th><%= link_to "Newest", :sort => "time", :class => "sort_link" %> </th>
+      </div>
+      <div class="padd_sort">
+        <th><%= link_to "Featured", :sort => "price", :class => "sort_link" %></th>
+      </div>
+      <div class="padd_sort">
+        <th><%= link_to "Popular", :sort => "name", :class => "sort_link" %></th>
+      </div>
+    </div>
+
+<!--     <div class="search">
+      <%= form_tag vets_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Find a Vet by name:"%>
+      <%= submit_tag "Search", class: "button_3_3_3" %>
+      <% end %>
+    </div>-->
+
+    <div class="search">
+      <%= form_tag(vets_path, method: :get) do %>
+        <p style="margin-bottom: 0;"> Search for a Vet by name </p>
+        <%= text_field_tag(:search, params[:search], class: "form-hold")%>
+        <%= submit_tag ("Search"), class: "button_3_3_3" %>
+      <% end %>
+    </div>
+
+    <div class="d-flex row">
+      <div class="sortby row">
+        <h5  class="show_h"style="line-height: : 0;">Sort by:</h5>
+        <div class="padd_sort">
+          <th class="sort_link"><%= link_to "Price", :sort => "price", :class => "sort_link" %></th>
+        </div>
+        <div class="padd_sort">
+          <th class="sort_link"><%= link_to "Name", :sort => "name", :class => "sort_link" %></th>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
     <div class="vets_all">
       <% @vets.each do |vet| %>

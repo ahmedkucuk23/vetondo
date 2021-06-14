@@ -4,15 +4,38 @@ class VetsController < ApplicationController
   def index
     @vets = Vet.all
     @vet = policy_scope(Vet)
-    if params[:query].present?
-      @vets = Vet.search_by_name(params[:query])
-    else
-      @vets = Vet.all
+    # if params[:query].present?
+    #   @vets = Vet.search_by_name(params[:query])
+    # else
+    #   @vets = Vet.all
+    # end
+
+    @vets = Vet.order(params[:sort])
+
+    if params[:search]
+      search_vets
+      if params[:sort] == "price"
+        @vets = Vet.all.sort_by{|vet| player.price}
+      elsif params[:sort] == "name"
+        @vets = Vet.order(:name)
+      elsif params[:sort] != "price"
+       @vets = Vet.order(params[:sort])
+      else
+        @vets = Vet.all
+      end
     end
+
+
   end
 
   def show
     find_vet
+  end
+
+  def search_vets
+    if @vet = Vet.all.find{|vet| vet.name.include?(params[:search])}
+      redirect_to vet_path(@vet)
+    end
   end
 
   def new
