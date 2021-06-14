@@ -15,11 +15,11 @@ class VetsController < ApplicationController
     if params[:search]
       search_vets
       if params[:sort] == "price"
-        @vets = Vet.all.sort_by{|vet| player.price}
-      elsif params[:sort] == "name"
-        @vets = Vet.order(:name)
+        @vets = Vet.all.sort_by{|vet| vet.price}
+      # elsif params[:sort] == "priceDesc"
+      #   @vets = Vet.all.sort_by{|vet| player.price.reverse!}
       elsif params[:sort] != "price"
-       @vets = Vet.order(params[:sort])
+        @vets = Vet.order(params[:sort])
       else
         @vets = Vet.all
       end
