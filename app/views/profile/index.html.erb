@@ -1,31 +1,48 @@
 <div class="container">
 <h1>Profile Dashboard</h1>
+  <div class="profile_info d-flex row">
+    <div class="image_profile_info"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d3/User_Circle.png" class="vet_prof_picture"></div>
+    <div>
+      <h3>User Name :</h3>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
  <% if current_user.is_vet_owner? %>
   <br>
+  <h2>My Vets:</h2>
   <% @vets.each do |vet| %>
   <%= link_to vet_path(vet), class: "card_link" do %>
-    <div class="container">
-      <div class="d-flex row">
-        <div class="col-lg-9 d-flex align-items-center">
+    <div class="container" style="margin:20px 0;">
+      <hr>
+      <div class="d-flex row justify-content-between align-items-center">
+        <div class="col-lg d-flex align-items-center">
           <div class="">
             <%= cl_image_tag vet.photo.key, height: 200, width: 200, crop: :fill, :class => "vet_prof_picture" %>
           </div>
           <div class="">
             <h3 class="vet_name"><%= vet.name %></h3>
-            <p class="vet_gray"><%= vet.speciality %> | <%= vet.address %></p>
+            <p class="vet_gray"><strong><%= vet.speciality %></strong> | <%= vet.address %></p>
             <h5 class="vet_desc"><%= vet.description %></h5>
           </div>
         </div>
-        <div class="col-lg-3 justify-content-center" style="text-align: center;">
-          <h3><%= vet.price %> BAM</h3>
-          <p>Per minute</p>
-          <%= link_to "Request a Call", vets_path, :class => "button_call" %>
+        <div class="col-lg-3" style="text-align: center;">
+          <h3 class="vet_name"><%= vet.price %> BAM</h3>
+          <p class="price_min">Per minute</p>
         </div>
       </div>
-
     </div>
     <% end %>
-
   <% end %>
 <% end %>
+
 </div>

@@ -12,7 +12,7 @@
 
     <div class="serch_vet d-flex row justify-content-between align-items-end" style="text-align: center; padding-bottom: 20px;">
 
-    <div class="showing row">
+    <div class="showing row col-sm-12 col-lg-4 justify-content-center" style="text-align: center;">
       <h5 class="show_h">Showing:</h5>
       <div class="padd_sort">
         <th><%= link_to "Newest", :sort => "time", :class => "sort_link" %> </th>
@@ -35,7 +35,7 @@
       <% end %>
     </div>-->
 
-    <div class="search">
+    <div class="search col-sm-12 col-lg-5 justify-content-center ">
       <%= form_tag(vets_path, method: :get) do %>
         <p style="margin-bottom: 0;"> Search for a Vet by name </p>
         <%= text_field_tag(:search, params[:search], class: "form-hold")%>
@@ -43,7 +43,7 @@
       <% end %>
     </div>
 
-    <div class="d-flex row">
+    <div class="d-flex row col-sm-12 col-lg-3 justify-content-center">
       <div class="sortby row">
         <h5  class="show_h"style="line-height: : 0;">Sort by:</h5>
         <div class="padd_sort">
@@ -54,6 +54,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 
