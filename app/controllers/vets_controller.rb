@@ -25,6 +25,12 @@ class VetsController < ApplicationController
       end
     end
 
+    @markers = @vets.geocoded.map do |vet|
+      {
+        lat: vet.latitude,
+        lng: vet.longitude
+      }
+    end
 
   end
 
