@@ -28,7 +28,8 @@ class VetsController < ApplicationController
     @markers = @vets.geocoded.map do |vet|
       {
         lat: vet.latitude,
-        lng: vet.longitude
+        lng: vet.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { vet: vet })
       }
     end
 

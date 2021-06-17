@@ -1,0 +1,60 @@
+
+.card_link_1{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  text-align:center;
+  text-decoration:none;
+}
+.card_link_1:hover{
+  font-family: 'Montserrat', sans-serif;
+  color: grey;
+}
+.card_div{
+  text-decoration:none;
+  p{
+    margin-bottom:2px;
+  }
+}
+.card_price{
+  font-size:20px;
+}
+.card_adress_info{
+  font-size: 15px;
+}
+.card_info_name{
+  font-size: 17px;
+}
+.vet_prof_picture_info{
+  width:100%;
+}
+.mapboxgl-popup-content{
+  padding:0px 0px 0px 0px;
+}
+
+.gm-style-iw {
+   width: 350px !important;
+   top: 0 !important;
+   left: 0 !important;
+   border-radius: 2px 2px 0 0;
+}
+.gm-style-iw {
+   width: 350px !important;
+   top: 0 !important;
+   left: 0 !important;
+   background-color: #fff;
+   box-shadow: 0 1px 6px rgba(178, 178, 178, 0.6);
+   border: 1px solid rgba(72, 181, 233, 0.6);
+   border-radius: 2px 2px 0 0;
+}
+.mapboxgl-popup-close-button{
+  position:absolute;
+  font-size: 15px;
+  width:30px;
+  height:30px;
+  background-color:white;
+}
+.mapboxgl-popup-content{
+  text-decoration:none;
+  padding:-10px;
+  margin:0;
+}

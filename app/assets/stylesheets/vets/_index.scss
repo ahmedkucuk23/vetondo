@@ -97,4 +97,27 @@
   font-size:18px;
   font-family: 'Montserrat', sans-serif;
 }
+.button_map{
+  position: absolute;
+  z-index: 3;
+  margin-top: 20px;
+  text-align:center;
+  border-radius: 20px;
+  border: 1px solid #1cc5dc;
+  background-color: #1cc5dc;
+  color: #FFFFFF;
+  font-size: 18px;
+  padding: 5px 15px;
+  letter-spacing: 1px;
+  transition: transform 80ms ease-in;
 
+}
+.button_map:hover{
+  border-radius: 20px;
+  border: 1px solid #1cc5dc;
+  background-color: white;
+  color: #1cc5dc;
+  letter-spacing: 1px;
+  padding: 5px 15px;
+  transition: transform 80ms ease-in;
+}
