@@ -18,12 +18,16 @@ class VetsController < ApplicationController
         @vets = Vet.all.sort_by{|vet| vet.price}
       # elsif params[:sort] == "priceDesc"
       #   @vets = Vet.all.sort_by{|vet| player.price.reverse!}
+      elsif params[:sort] == "created_at"
+        @vets = Vet.all.sort_by{|vet| vet.created_at.reversed}
       elsif params[:sort] != "price"
         @vets = Vet.order(params[:sort])
       else
         @vets = Vet.all
       end
     end
+
+
 
     @markers = @vets.geocoded.map do |vet|
       {
