@@ -19,7 +19,7 @@ class VetsController < ApplicationController
       # elsif params[:sort] == "priceDesc"
       #   @vets = Vet.all.sort_by{|vet| player.price.reverse!}
       elsif params[:sort] == "created_at"
-        @vets = Vet.all.sort_by{|vet| vet.created_at.reversed}
+        @vets = Vet.all.sort_by.reverse{|vet| vet.created_at}
       elsif params[:sort] != "price"
         @vets = Vet.order(params[:sort])
       else
