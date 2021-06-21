@@ -6,6 +6,7 @@ class User < ApplicationRecord
 
   has_many :vets
   has_one_attached :avatar
+
   def is_vet_owner?
     self.vets.any? ? true : false
   end
