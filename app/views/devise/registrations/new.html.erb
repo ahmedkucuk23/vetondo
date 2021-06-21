@@ -13,6 +13,10 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.input :username %>
+          <%= f.input :bio %>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
@@ -24,6 +28,11 @@
           <%= f.input :password_confirmation,
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
+                      <label class="button_1">Upload picture
+                      <span style="display:none;">
+                      <%= f.input :avatar, as: :file, class: "hidden" %>
+                      </span>
+                      </label><br>
         </div>
 
         <div class="form-actions">

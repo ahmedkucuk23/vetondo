@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :vets
+  has_one_attached :avatar
   def is_vet_owner?
     self.vets.any? ? true : false
   end
