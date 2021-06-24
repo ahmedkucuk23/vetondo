@@ -1,15 +1,23 @@
 <div class="container">
-<div class="first_h"> <h1 class="lato light profile-header-style mb-5">Welcome to your profile, <bold><%= current_user.first_name %></bold></h1></div>
-  <div class="profile_info d-flex row">
+<div class="first_h d-flex justify-content-center"><p class="home_title">Welcome to your profile, <bold><%= current_user.first_name.capitalize %></bold></p></div>
+  <div class="profile_info d-flex row align-items-center">
+    <div class="profile_info_photo col-lg-4">
       <% if current_user.avatar.attached? %>
-        <%= cl_image_tag current_user.avatar.key, class: "avatar-lg avatar-bordered vet_prof_picture", height: 90, width: 90, crop: :fill %>
+      <div class="profile_change d-flex row justify-content-center">
+        <div clas="pic"><%= cl_image_tag current_user.avatar.key, class: "vet_prof_picture_profile" %></div>
+        <div class="pic_chng"><%= link_to "Edit", edit_user_registration_path, :class => "button_call" %></div>
+      </div>
       <% else %>
         <%= cl_image_tag "https://media.defense.gov/2020/Feb/19/2002251686/700/465/0/200219-A-QY194-002.JPG", class: "avatar-lg avatar-bordered vet_prof_picture" %>
       <% end %>
-    <div>
-      <h3>User Name :</h3>
-      <p class="text-right lato light color-grey"><%= current_user.first_name %> <%= current_user.last_name %> | <%= current_user.email %></p>
-      <p class="text-right lato light color-grey"><%= current_user.bio %></p>
+    </div>
+    <div class="profile_info_desc col-lg-8">
+      <h3>User Name: <%= current_user.username %></h3>
+      <p>First Name: <%= current_user.first_name %></p>
+      <p>Last Name: <%= current_user.last_name %></p>
+      <p>Email: <%= current_user.email %></p>
+      <p>Your Bio: <%= current_user.bio %></p>
+      <p>Your Password: <%= link_to "Change your password", edit_user_registration_path, :class => "button_3_3_3" %></p>
     </div>
 
   </div>
