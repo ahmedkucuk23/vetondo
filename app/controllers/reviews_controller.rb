@@ -3,8 +3,9 @@ class ReviewsController < ApplicationController
     @vet = Vet.find(params[:vet_id])
     @review = Review.new(review_params)
     @review.vet = @vet
+    authorize @vet
     if @review.save
-      redirect_to vet_path(@vet)
+      redirect_to vet_path(@vet, anchor: "review_#{@review.id}")
     else
       render 'vets/show'
     end

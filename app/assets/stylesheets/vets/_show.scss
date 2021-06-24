@@ -1,0 +1,41 @@
+.reviews_vets{
+  background-color: #f7f6f1;
+  border: 1px solid #e4e2de;
+  font-family: 'Montserrat', sans-serif;
+}
+.review_h{
+  font-size: 24px;
+  line-height: 25px;
+  font-weight: 200;
+  color: #929292;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+.review_p{
+  color: #393939;
+  font-size: 15px;
+  line-height: 21px;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  background-color:#fff;
+  margin-left: 20px;
+  padding: 15px;
+  border: 1px solid #e4e2de;
+  font-family: 'Montserrat', sans-serif;
+  width:100%;
+}
+.review_user_pic{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius: 50%;
+}
+.comment_line{
+  margin:20px 0;
+}
+.username_review{
+  color: #929292;
+  font-size:12px;
+  margin-left:20px;
+}
