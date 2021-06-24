@@ -41,6 +41,7 @@ class VetsController < ApplicationController
 
   def show
     find_vet
+    @review = Review.new  # <-- You need this now.
   end
 
   def search_vets

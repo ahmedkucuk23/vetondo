@@ -11,6 +11,22 @@
         <h3 class="vet_name"><%= @vet.name %></h3>
         <p class="vet_gray"><%= @vet.speciality %> | <%= @vet.address %></p>
         <h5 class="vet_desc"><%= @vet.description %></h5>
+        <h2><%= pluralize @vet.reviews.size, "review" %></h2>
+          <div id="reviews">
+            <% if @vet.reviews.blank? %>
+              Be the first to leave a review for <%= @vet.name %>
+            <% else %>
+              <% @vet.reviews.each do |review| %>
+                <p><%= review.content %></p>
+              <% end %>
+            <% end %>
+          </div>
+
+        <%= simple_form_for([ @vet, @review ]) do |f| %>
+          <%= f.input :content, as: :text %>
+          <%= f.button :submit %>
+        <% end %>
+
       </div>
     </div>
     <div class="col-lg-3 justify-content-center" style="text-align: center;">
