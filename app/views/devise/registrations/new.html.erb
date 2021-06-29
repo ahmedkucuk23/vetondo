@@ -28,10 +28,11 @@
           <%= f.input :password_confirmation,
                       required: true,
                       input_html: { autocomplete: "new-password" } %>
-                      <label class="sec-btn sec-btn-file">Upload picture
-                      <span style="display:none;">
-                      <%= f.input :avatar, as: :file, required: true, class: "hidden" %>
-                      </span>
+                      <label class="sec-btn sec-btn-file">
+                      <!--   Upload picture
+                      <span style="display:none;"> -->
+                      <%= f.input :avatar, as: :file, required: true, class: "" %>
+                      <!-- </span> -->
                       </label><br>
         </div>
 
