@@ -13,14 +13,14 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :first_name %>
-          <%= f.input :last_name %>
-          <%= f.input :username %>
-          <%= f.input :bio %>
           <%= f.input :email,
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" }%>
+          <%= f.input :first_name %>
+          <%= f.input :last_name %>
+          <%= f.input :username %>
+          <%= f.input :bio %>
           <%= f.input :password,
                       required: true,
                       hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
