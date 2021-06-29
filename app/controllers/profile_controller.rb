@@ -6,4 +6,7 @@ class ProfileController < ApplicationController
     end
   end
 
+  def edit
+  end
+
 end
