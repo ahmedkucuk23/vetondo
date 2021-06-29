@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :reviews, only: :create
   end
   get '/profile',    to: 'profile#index'
+  resources :profile
 end
