@@ -32,8 +32,10 @@
             <div class="comment_line d-flex row align-items-center">
               <div class=""><%= cl_image_tag current_user.avatar.key, class: "review_user_pic" %></div>
 
+
               <div class=""><div class="username_review"><%= current_user.username %></div><p id="review_<%= review.id %>"class="review_p"><%= review.content %></p></div>
             </div>
+
             <% end %>
           <% end %>
         </div>
